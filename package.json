@@ -1,0 +1,24 @@
+{
+  "name": "weather-notifier",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node main.ts",
+    "build": "rm -rf build && tsc && cp package* .env.example build",
+    "deploy": "rm deployment.zip && cd build && zip -r ../deployment.zip ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/pubsub": "^2.18.1",
+    "@sendgrid/mail": "^7.4.7",
+    "axios": "^0.23.0",
+    "dotenv-safe": "^8.2.0",
+    "twilio": "^3.69.0"
+  },
+  "devDependencies": {
+    "@types/node": "^16.11.0"
+  }
+}
